@@ -1,1 +1,1 @@
-# beispielloesungen
+# Beispiellösungen
