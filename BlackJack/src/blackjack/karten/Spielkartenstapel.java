@@ -3,7 +3,7 @@ package blackjack.karten;
 import java.util.Random;
 
 /**
- * Objekte dieser Klasse repräsentieren einen Kartenstapel.
+ * Objekte dieser Klasse repraesentieren einen Kartenstapel.
  * 
  * @author Malte Knutz
  */
@@ -12,7 +12,7 @@ public class Spielkartenstapel {
 	/**
 	 * Die Karten des Stapels. Werden Karten von dem Stapel genommen, werden Sie
 	 * nicht wirklich entfernt. In einem anderen Attribut wird abgelegt, wie
-	 * hoch der Stapel ist und verwehrt darüber den Zugriff auf Karten, die
+	 * hoch der Stapel ist und verwehrt darueber den Zugriff auf Karten, die
 	 * schon genommen wurden
 	 */
 	private Spielkarte[] karten;
@@ -27,14 +27,14 @@ public class Spielkartenstapel {
 	 */
 	public Spielkartenstapel() {
 		// Karten erzeugen
-		// 1. Gültige Farben und Bezeichnungen lesen
+		// 1. Gueltige Farben und Bezeichnungen lesen
 		String[] farben = Spielkarte.ermittleGueltigeFarben();
 		String[] bezeichnungen = Spielkarte.ermittleGueltigeKartenbezeichnungen();
 
-		// 2. Ein Array für die Karten vorbereiten - in der richtigen Größe
+		// 2. Ein Array fuer die Karten vorbereiten - in der richtigen Groesse
 		karten = new Spielkarte[farben.length * bezeichnungen.length];
 
-		// 3. Für jede Farbe und pro Farbe für jede Bezeichnung eine Karte
+		// 3. Fuer jede Farbe und pro Farbe fuer jede Bezeichnung eine Karte
 		// erzeugen
 		// ...und diese dann in das Array an fortlaufender Position merken
 		int index = 0;
@@ -51,13 +51,13 @@ public class Spielkartenstapel {
 	}
 
 	/**
-	 * Liefert die oberste Karte des Stapels und reduziert die Höhe des Stapels
+	 * Liefert die oberste Karte des Stapels und reduziert die Hoehe des Stapels
 	 * damit um eins.
 	 * 
 	 * @return die oberste Karte des Stapels.
 	 */
 	public Spielkarte getObersteKarte() {
-		// Zuerst mal prüfen, ob der Stapel überhaupt noch Karten hat...
+		// Zuerst mal pruefen, ob der Stapel ueberhaupt noch Karten hat...
 		if (aktuellObersteKarte < 0) {
 			System.out.println("Fehler!!! Der Kartenstapel ist leer.");
 			System.exit(0);
@@ -70,7 +70,7 @@ public class Spielkartenstapel {
 	}
 
 	/**
-	 * Setzt den Kartenstapel zurück. D.h. der Stapel wird aufgefüllt und neu
+	 * Setzt den Kartenstapel zurueck. D.h. der Stapel wird aufgefuellt und neu
 	 * gemischt.
 	 */
 	private void neuMischen() {
@@ -80,7 +80,7 @@ public class Spielkartenstapel {
 		Random randomizer = new Random();
 		for (int i = 0; i < 1000; i++) {
 
-			// Dazu zwei beliebige Karten wählen
+			// Dazu zwei beliebige Karten waehlen
 			int pos1 = randomizer.nextInt(karten.length);
 			int pos2 = randomizer.nextInt(karten.length);
 
@@ -93,7 +93,7 @@ public class Spielkartenstapel {
 			karten[pos2] = karte1;
 		}
 
-		// Nun noch den "Zeiger" auf die oberste Karte des Stapels zurücksetzen
+		// Nun noch den "Zeiger" auf die oberste Karte des Stapels zuruecksetzen
 		aktuellObersteKarte = karten.length - 1;
 
 	}
@@ -105,7 +105,7 @@ public class Spielkartenstapel {
 	 */
 	public String getTextdarstellung() {
 		int anzahlRest = aktuellObersteKarte + 1;
-		String text = "Kartenstapel (" + anzahlRest + " übrig):";
+		String text = "Kartenstapel (" + anzahlRest + " uebrig):";
 		for (int i = 0; i <= aktuellObersteKarte; i++) {
 			text = text + "\n   " + karten[i].getTextdarstellung();
 		}

@@ -1,16 +1,16 @@
 public class Auto {
 
-	// Immergültige Konstanten
+	// Immergueltige Konstanten
 	private static final double PROFILTIEFE_NEUER_REIFEN = 0.8;
 	private static final double PROFILTIEFE_MINIMAL_ERLAUBT = 0.3;
 	private static final double REIFENABNUTZUNG_PRO_KM = 0.00025;
 
-	// Pro Auto unveränderbar
+	// Pro Auto unveraenderbar
 	private final double maxTankVolumen;
 	private final double verbrauchProKm;
 	private final int wagennr;
 
-	// Veränderliche Attribute
+	// Veraenderliche Attribute
 	private double kilometerstand;
 	private double tankinhalt;
 	private double profiltiefeReifen;
@@ -46,11 +46,11 @@ public class Auto {
 			return;
 		}
 
-		// Erstmal nachsehen, wie weit wir grundsätzlich kommen würden
+		// Erstmal nachsehen, wie weit wir grundsaetzlich kommen wuerden
 		double reichweite = bestimmeReichweite();
 
-		// Will jemand weiter fahren als die Reichweite beträgt?
-		// Wenn ja, dann müssen wir das beschränken
+		// Will jemand weiter fahren als die Reichweite betraegt?
+		// Wenn ja, dann muessen wir das beschraenken
 		double wirklichGefahreneKm;
 		if (km > reichweite) {
 			wirklichGefahreneKm = reichweite;
@@ -73,7 +73,7 @@ public class Auto {
 		double verfahrbaresRestprofil = profiltiefeReifen - PROFILTIEFE_MINIMAL_ERLAUBT;
 		double reichweiteReifen = verfahrbaresRestprofil / getReifenAbnutzungProKm();
 
-		// Jetzt prüfen, was mehr einschränkt. Die Reifen oder Tank?
+		// Jetzt pruefen, was mehr einschraenkt. Die Reifen oder Tank?
 		if (reichweiteReifen < reichweiteTank) {
 			return reichweiteReifen;
 		} else {
@@ -83,7 +83,7 @@ public class Auto {
 
 	private double getReifenAbnutzungProKm() {
 		// Diese Methode bestimmt, wie stark die Reifenabnutzung pro Km
-		// wäre, wenn das Auto jetzt fahren würde
+		// waere, wenn das Auto jetzt fahren wuerde
 		if (!isFahrerOk()) {
 			return 0;
 		}
@@ -98,7 +98,7 @@ public class Auto {
 
 	private double getBenzinverbrauchProKm() {
 		// Diese Methode bestimmt, wie stark der Benzinverbrauch pro Km
-		// wäre, wenn das Auto jetzt fahren würde
+		// waere, wenn das Auto jetzt fahren wuerde
 		if (!isFahrerOk()) {
 			return 0;
 		}
@@ -112,11 +112,11 @@ public class Auto {
 	}
 
 	private boolean isFahrerOk() {
-		// Ohne Fahrer läuft hier gar nichts
+		// Ohne Fahrer laeuft hier gar nichts
 		if (fahrer == null) {
 			return false;
 		}
-		// Jünger als 18? Dann passiert auch nix
+		// Juenger als 18? Dann passiert auch nix
 		if (fahrer.getAlter() < 18) {
 			return false;
 		}
@@ -130,7 +130,7 @@ public class Auto {
 			fahrername = fahrer.getName();
 		}
 		System.out.println(getWagenname() + " : " + fahrername + " am Steuer, " + kilometerstand
-				+ " bisher gefahren. Tankinhalt " + tankinhalt + " liter und " + profiltiefeReifen + " mm Reifenprofil übrig.");
+				+ " bisher gefahren. Tankinhalt " + tankinhalt + " liter und " + profiltiefeReifen + " mm Reifenprofil uebrig.");
 	}
 
 	public double getkilometerstand() {
@@ -158,7 +158,7 @@ public class Auto {
 			// Ja: Dann einfach nur Tank voll machen
 			tanken();
 		} else {
-			// Nein: Tank um die Tankmenge füllen
+			// Nein: Tank um die Tankmenge fuellen
 			this.tankinhalt = liter + tankinhalt;
 		}
 	}

@@ -21,7 +21,7 @@ public class ArraySorter {
 		// wir rufen auf: setzeKleinsteNachVorne(a,2), danach: 1 2 4 8 6
 		// wir rufen auf: setzeKleinsteNachVorne(a,3), danach: 1 2 4 6 8
 		// wir rufen auf: setzeKleinsteNachVorne(a,3), danach: 1 2 4 6 8
-		// (eigentlich überflüssig)
+		// (eigentlich ueberfluessig)
 		for (int i = 0; i < a.length; i++) {
 			setzeKleinsteNachVorne(a, i);
 		}
@@ -37,7 +37,7 @@ public class ArraySorter {
 	 * @param array
 	 */
 	public static void arrayAusgeben(int[] array) {
-		System.out.println("Array, Größe " + array.length + ":");
+		System.out.println("Array, Groesse " + array.length + ":");
 		for (int i : array) {
 			System.out.print(i + " ");
 		}
@@ -55,9 +55,9 @@ public class ArraySorter {
 	public static void setzeKleinsteNachVorne(int[] array, int abPosition) {
 		// Beispiel: 1 5 3 2 8, wir fangen ab 1 (also 2. Stelle an)
 
-		// Wenn wir die kleinste Zahl suchen, müssen wir uns
+		// Wenn wir die kleinste Zahl suchen, muessen wir uns
 		// immer merken, was die kleinste ist und an welcher Stelle diese ist
-		// Im Beispiel wäre die bisher kleinste Zahl 5 und die Position 1
+		// Im Beispiel waere die bisher kleinste Zahl 5 und die Position 1
 		int bisherKleinsteZahl = array[abPosition];
 		int positionVonBisherKleinsteZahl = abPosition;
 
@@ -80,7 +80,7 @@ public class ArraySorter {
 		int ersteZahl = array[abPosition];
 		int kleinsteZahl = array[positionVonBisherKleinsteZahl];
 
-		// Und schreiben die Werte vertauscht zurück
+		// Und schreiben die Werte vertauscht zurueck
 		array[positionVonBisherKleinsteZahl] = ersteZahl;
 		array[abPosition] = kleinsteZahl;
 	}

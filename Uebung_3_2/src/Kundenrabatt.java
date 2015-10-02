@@ -70,7 +70,7 @@ public class Kundenrabatt {
 		System.out.println("*** Eingabedaten ***");
 		System.out.println("");
 		System.out.println("Bisheriges Bestellvolumen: " + bisherigesKundenBestellvolumen);
-		System.out.println("Bestellhöhe aktuell: " + bestellwert);
+		System.out.println("Bestellhoehe aktuell: " + bestellwert);
 		if (istPremiumKunde) {
 			System.out.println("Kunde ist Premiumkunde.");
 		} else {
@@ -84,8 +84,8 @@ public class Kundenrabatt {
 		System.out.println("");
 		System.out.println("*** Ergebnis Rabattrechnung ***");
 		System.out.println("");
-		System.out.println("Gewährter Rabatt: " + rabattInEuro + " € (" + rabattInProzent + "%)");
-		System.out.println("Rechnungshöhe: " + neuerBestellwert);
+		System.out.println("Gewaehrter Rabatt: " + rabattInEuro + " € (" + rabattInProzent + "%)");
+		System.out.println("Rechnungshoehe: " + neuerBestellwert);
 
 	}
 

@@ -2,7 +2,7 @@ public class Primzahl {
 
 	public static void main(String[] args) {
 
-		// 10 Zahlenblöcke sollen getestet werden:
+		// 10 Zahlenbloecke sollen getestet werden:
 		for (int i = 0; i < 10; i++) {
 			// Blockgrenzen berechnen
 			int blockStart = (i * 1000) + 1;
@@ -16,7 +16,7 @@ public class Primzahl {
 			// mehr!
 			double anteilProzent = 100.0 * anzahlPrimzahlen / anzahlTestzahlen;
 
-			System.out.println("Block " + i + " von " + blockStart + " bis " + blockEnde + " enthält " + anzahlPrimzahlen
+			System.out.println("Block " + i + " von " + blockStart + " bis " + blockEnde + " enthaelt " + anzahlPrimzahlen
 					+ " Primzahlen (" + anteilProzent + "%).");
 		}
 
@@ -26,7 +26,7 @@ public class Primzahl {
 		// Alle Zahlen von 2 bis testzahl-1 durchprobieren
 		for (int teiler = 2; teiler < testzahl; teiler = teiler + 1) {
 			// Sobald ein Teiler (d.h. Rest = 0) dabei ist, sofort das
-			// ergebnis zurückliefern
+			// ergebnis zurueckliefern
 			if (testzahl % teiler == 0) {
 				return false;
 			}
@@ -44,7 +44,7 @@ public class Primzahl {
 				anzahl++;
 			}
 		}
-		// Ergebnis zurückliefern
+		// Ergebnis zurueckliefern
 		return anzahl;
 	}
 

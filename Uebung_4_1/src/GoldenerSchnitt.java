@@ -18,7 +18,7 @@ public class GoldenerSchnitt {
 			bruchDarstellen(neuerZaehler, neuerNenner);
 
 			// Nach der Ausgabe sind die ermittelten Werte alt geworden
-			// und in der nächsten Runde werden neue Werte ermittelt
+			// und in der naechsten Runde werden neue Werte ermittelt
 			alterNenner = neuerNenner;
 			alterZaehler = neuerZaehler;
 
@@ -27,7 +27,7 @@ public class GoldenerSchnitt {
 	}
 
 	public static void bruchDarstellen(int zaehler, int nenner) {
-		// Die größere Zahl von beiden ermitteln, denn
+		// Die groessere Zahl von beiden ermitteln, denn
 		// diese Zahl bestimmt, wie lang der Bruchstrich sein muss
 		double groessereZahl;
 		if (zaehler > nenner) {
@@ -36,7 +36,7 @@ public class GoldenerSchnitt {
 			groessereZahl = nenner;
 		}
 
-		// Anzahl der Zehnerpotezen bestimmt die Länge des Bruchstriches
+		// Anzahl der Zehnerpotezen bestimmt die Laenge des Bruchstriches
 		int anzahlZehnerpotenzen = 1;
 		while (groessereZahl >= 10) {
 			anzahlZehnerpotenzen++;
@@ -44,7 +44,7 @@ public class GoldenerSchnitt {
 		}
 
 		// Kommazahl ermitteln. Vorsicht: Die Division zweier int-Zahlen
-		// ist eine Ganzzahndividion! Mind. eine zahl müssen wir
+		// ist eine Ganzzahndividion! Mind. eine zahl muessen wir
 		// vorher also umwandeln!!!
 		double zaehlerAlsDouble = zaehler;
 		double kommazahl = zaehlerAlsDouble / nenner;
@@ -53,7 +53,7 @@ public class GoldenerSchnitt {
 		System.out.println("");
 		System.out.println("");
 
-		// 1. Zeile der eigentlichen Ausgabe: Zähler
+		// 1. Zeile der eigentlichen Ausgabe: Zaehler
 		System.out.println(zaehler);
 		// 2. Zeile der eigentlichen Ausgabe: Bruchstrich und Komazahl
 		for (int i = 0; i < anzahlZehnerpotenzen; i++) {

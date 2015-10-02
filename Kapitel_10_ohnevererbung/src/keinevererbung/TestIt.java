@@ -3,7 +3,7 @@ package keinevererbung;
 public class TestIt {
 
 	public static void main(String[] args) {
-		Dozent d = new Dozent("Ernst", "Müller", 42, "Informatik");
+		Dozent d = new Dozent("Ernst", "Mueller", 42, "Informatik");
 		System.out.println(d.getTextDarstellung());
 		d.halteVorlesung();
 		 

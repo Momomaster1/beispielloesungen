@@ -12,17 +12,17 @@ import blackjack.karten.Spielkartenstapel;
 public class Start {
 
 	/**
-	 * Die Main-Methode. Der Einstiegspunkt bei Ausfühung des Programmes
+	 * Die Main-Methode. Der Einstiegspunkt bei Ausfuehung des Programmes
 	 * 
 	 * @param args
 	 *            Kommandozeilenparameter
 	 */
 	public static void main(String[] args) {
 
-		// Zuerst einmal Begrüßen wir den Spieler
+		// Zuerst einmal Begruessen wir den Spieler
 		Benutzerinterface.begruessung();
 
-		// Zuerst mal einen Stapel und 2 Kartenhände erzeugen
+		// Zuerst mal einen Stapel und 2 Kartenhaende erzeugen
 		Spielkartenstapel stapel = new Spielkartenstapel();
 		Kartenhand handSpieler = new Kartenhand();
 		Kartenhand handGeber = new Kartenhand();
@@ -33,7 +33,7 @@ public class Start {
 
 		// Nun wird der Spieler auch gleich gefragt, was er tun will
 		// (In der einfachen Version blenden wir aus, dass er schon gewonnen
-		// haben könnte...)
+		// haben koennte...)
 		String spielzug = Benutzerinterface.frageNachSpielzug(handSpieler);
 
 		// Solange der Spieler Karten zieht, machen wir das
@@ -41,18 +41,18 @@ public class Start {
 
 			handSpieler.nimmKarte(stapel);
 
-			// Prüfen, ob schon verloren
+			// Pruefen, ob schon verloren
 			if (handSpieler.ermittleWertOptimal() > Konstanten.ZIELWERT) {
 				Benutzerinterface.verlorenUeber21(handGeber, handSpieler);
 				System.exit(0);
 			}
 
-			// Vielleicht möchter der Spieler noch eine Karte haben...
+			// Vielleicht moechter der Spieler noch eine Karte haben...
 			spielzug = Benutzerinterface.frageNachSpielzug(handSpieler);
 		}
 		// Nun hat er sich entschieden, keine Karten mehr zu ziehen. Der Geber
 		// ist an der Reihe.
-		// Um es spannender (nerviger?) zu machen, wird der Anwender über jeden
+		// Um es spannender (nerviger?) zu machen, wird der Anwender ueber jeden
 		// Schritt des Gebers informiert
 		// Der Geber zieht Karten, bis er mind. 17 Punkte hat.
 		while (handGeber.ermittleWertJedesAssZaehlt11() < Konstanten.LIMIT_GEBER) {
@@ -60,11 +60,11 @@ public class Start {
 			Benutzerinterface.informiereUeberGeberKartenzug(handGeber);
 		}
 
-		// Nun ist das Spiel vorbei. Noch klären, wie es ausgegangen ist.
-		// 1. Möglichkeit: Geber liegt über 21
-		// 2. Möglichkeit: Geber hat mehr als der Spieler
-		// 3. Möglichkeit: Geber hat weniger als der Spieler
-		// 4. Möglichkeit: Gleichstand
+		// Nun ist das Spiel vorbei. Noch klaeren, wie es ausgegangen ist.
+		// 1. Moeglichkeit: Geber liegt ueber 21
+		// 2. Moeglichkeit: Geber hat mehr als der Spieler
+		// 3. Moeglichkeit: Geber hat weniger als der Spieler
+		// 4. Moeglichkeit: Gleichstand
 		if (handGeber.ermittleWertOptimal() > Konstanten.ZIELWERT) {
 			Benutzerinterface.gewonnenGeberUeber21(handGeber, handSpieler);
 		} else if (handGeber.ermittleWertOptimal() > handSpieler.ermittleWertOptimal()) {

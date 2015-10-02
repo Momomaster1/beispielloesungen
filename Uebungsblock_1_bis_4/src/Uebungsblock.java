@@ -1,12 +1,12 @@
 public class Uebungsblock {
 
-	// Achtung: Zur Ausführung des Programms muss das Uebungstools.jar
+	// Achtung: Zur Ausfuehrung des Programms muss das Uebungstools.jar
 	// eingebunden
 	// werden. Die Anleitung finden Sie in den Folien zu dieser
-	// Übung.
+	// Uebung.
 
 	/**
-	 * Mainmethode: dient zum Aufruf der einzelnen Übungen
+	 * Mainmethode: dient zum Aufruf der einzelnen Uebungen
 	 * 
 	 */
 	public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class Uebungsblock {
 		boolean ende = false;
 		while (!ende) {
 
-			int nr = Eingabe.frageNachIntUeberDialog("Bitte Übungsnr eingeben (1-7, 0 zum Beenden):");
+			int nr = Eingabe.frageNachIntUeberDialog("Bitte Uebungsnr eingeben (1-7, 0 zum Beenden):");
 
 			Zeichenfenster.zeigeZeichenfenster();
 			Zeichenfenster.clearZeichenfenster();
@@ -49,7 +49,7 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * Umsetzung der Übung 1.
+	 * Umsetzung der Uebung 1.
 	 */
 	public static void uebung1() {
 
@@ -67,7 +67,7 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * Umsetzung der Übung 2.
+	 * Umsetzung der Uebung 2.
 	 */
 	public static void uebung2() {
 		for (int i = 0; i < 800; i = i + 10) {
@@ -76,7 +76,7 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * Umsetzung der Übung 3.
+	 * Umsetzung der Uebung 3.
 	 */
 	public static void uebung3() {
 		for (int i = 0; i < 300; i = i + 5) {
@@ -85,7 +85,7 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * Umsetzung der Übung 4.
+	 * Umsetzung der Uebung 4.
 	 */
 	public static void uebung4() {
 		for (int i = 0; i < 600; i = i + 10) {
@@ -94,7 +94,7 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * Umsetzung der Übung 5.
+	 * Umsetzung der Uebung 5.
 	 */
 	public static void uebung5() {
 		for (int i = 0; i < 800; i = i + 8) {
@@ -106,14 +106,14 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * Umsetzung der Übung 6.
+	 * Umsetzung der Uebung 6.
 	 */
 	public static void uebung6() {
 		// 2 verschachtelte Schleifen, um jede Kombination von x- und
 		// y-Koordinate 1x zu erwischen
 		for (int y = 0; y < 800; y++) {
 			for (int x = 0; x < 800; x++) {
-				// Abstände zu den "Farbzentren" berechnen
+				// Abstaende zu den "Farbzentren" berechnen
 				double rotAbstand = ermittleAbstand(x, y, 250, 270);
 				double gruenAbstand = ermittleAbstand(x, y, 550, 270);
 				double blauAbstand = ermittleAbstand(x, y, 400, 530);
@@ -127,14 +127,14 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * Umsetzung der Übung 7.
+	 * Umsetzung der Uebung 7.
 	 */
 	public static void uebung7() {
 		// 2 verschachtelte Schleifen, um jede Kombination von x- und
 		// y-Koordinate 1x zu erwischen
 		for (int y = 0; y < 800; y++) {
 			for (int x = 0; x < 800; x++) {
-				// Abstände zu den "Farbzentren" berechnen
+				// Abstaende zu den "Farbzentren" berechnen
 				double rotAbstand = ermittleAbstand(x, y, 250, 270);
 				double gruenAbstand = ermittleAbstand(x, y, 550, 270);
 				double blauAbstand = ermittleAbstand(x, y, 400, 530);
@@ -168,8 +168,8 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * In Übung 7 soll der Abstand zweier Punkt die Farbgebung (rot-, grün- oder
-	 * blauAnteil) bestimmen. Diese Methode übernimmt genau diese Berechnung.
+	 * In Uebung 7 soll der Abstand zweier Punkt die Farbgebung (rot-, gruen- oder
+	 * blauAnteil) bestimmen. Diese Methode uebernimmt genau diese Berechnung.
 	 * 
 	 * @param abstand
 	 * @return
@@ -182,8 +182,8 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * In Übung 8 soll der Abstand zweier Punkt die Farbgebung (rot-, grün- oder
-	 * blauAnteil) bestimmen. Diese Methode übernimmt genau diese Berechnung.
+	 * In Uebung 8 soll der Abstand zweier Punkt die Farbgebung (rot-, gruen- oder
+	 * blauAnteil) bestimmen. Diese Methode uebernimmt genau diese Berechnung.
 	 * 
 	 * @param abstand
 	 * @return

@@ -8,7 +8,7 @@ public class TestIt {
 	}
 	
 	private static void testeVererbung() {
-		Dozent d = new Dozent("Ernst", "Müller", 42, "Informatik");
+		Dozent d = new Dozent("Ernst", "Mueller", 42, "Informatik");
 		System.out.println(d.getTextDarstellung());
 		d.halteVorlesung();
 		 
@@ -29,7 +29,7 @@ public class TestIt {
 
 	private static Person[] erzeugePersonen(){
 		Person[] personen = new Person[5];
-		personen[0] = new Dozent("Ernst", "Müller", 42, "Informatik");
+		personen[0] = new Dozent("Ernst", "Mueller", 42, "Informatik");
 		personen[1] = new Student("August", "Meier", 22, "W07d-1111");
 		personen[2] = new Student("Frieda", "Schulz", 21, "W07d-1111");
 		personen[3] = new Person("Berta", "Meyer", 33);

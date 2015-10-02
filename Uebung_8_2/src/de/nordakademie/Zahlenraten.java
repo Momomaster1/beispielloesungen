@@ -22,15 +22,15 @@ public class Zahlenraten {
 		// In einer Schleife weitere Tipps abholen (falls nocht notwendig)
 		while (zuletztGetippteZahl != gesuchteZahl) {
 
-			// größer/kleiner-Tipp ermitteln
+			// groesser/kleiner-Tipp ermitteln
 			String tipp;
 			if (gesuchteZahl < zuletztGetippteZahl) {
 				tipp = "Die gesuchte Zahl ist kleiner.";
 			} else {
-				tipp = "Die gesuchte Zahl ist größer.";
+				tipp = "Die gesuchte Zahl ist groesser.";
 			}
 
-			// Mit dem Tipp gleich nach der nächsten Zahl fragen
+			// Mit dem Tipp gleich nach der naechsten Zahl fragen
 			zuletztGetippteZahl = rateVersuch("Das war nix.\n" + tipp + "\nEinfach nochmal probieren:");
 			anzahlVersuche++;
 		}

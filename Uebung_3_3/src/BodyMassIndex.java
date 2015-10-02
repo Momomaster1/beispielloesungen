@@ -11,17 +11,17 @@ public class BodyMassIndex {
 
 		// Ausgabe der Werte
 		System.out.println("Gewicht: " + gewichtInKilo + " kg");
-		System.out.println("Größe: " + groesseInMeter + " m");
+		System.out.println("Groesse: " + groesseInMeter + " m");
 		System.out.println("Alter: " + alter + " Jahre");
 		if (maennlich) {
-			System.out.println("männlich");
+			System.out.println("maennlich");
 		} else {
 			System.out.println("weiblich");
 		}
 		System.out.println("Body-Mass-Index: " + bmi);
 
 		if (maennlich) {
-			// bei Männern wird 1 abgezogen, so dass gegen die Tabelle
+			// bei Maennern wird 1 abgezogen, so dass gegen die Tabelle
 			// der Frauen verglichen werden kann
 			bmi = bmi - 1;
 		}
@@ -32,7 +32,7 @@ public class BodyMassIndex {
 			} else if (bmi <= 24) {
 				System.out.println("Normalgewichtig.");
 			} else {
-				System.out.println("Übergewichtig.");
+				System.out.println("Uebergewichtig.");
 			}
 		} else if (alter < 35) {
 			if (bmi < 20) {
@@ -40,7 +40,7 @@ public class BodyMassIndex {
 			} else if (bmi <= 25) {
 				System.out.println("Normalgewichtig.");
 			} else {
-				System.out.println("Übergewichtig.");
+				System.out.println("Uebergewichtig.");
 			}
 		} else if (alter < 45) {
 			if (bmi < 21) {
@@ -48,7 +48,7 @@ public class BodyMassIndex {
 			} else if (bmi <= 26) {
 				System.out.println("Normalgewichtig.");
 			} else {
-				System.out.println("Übergewichtig.");
+				System.out.println("Uebergewichtig.");
 			}
 		} else if (alter < 55) {
 			if (bmi < 22) {
@@ -56,7 +56,7 @@ public class BodyMassIndex {
 			} else if (bmi <= 27) {
 				System.out.println("Normalgewichtig.");
 			} else {
-				System.out.println("Übergewichtig.");
+				System.out.println("Uebergewichtig.");
 			}
 		} else if (alter < 65) {
 			if (bmi < 23) {
@@ -64,7 +64,7 @@ public class BodyMassIndex {
 			} else if (bmi <= 28) {
 				System.out.println("Normalgewichtig.");
 			} else {
-				System.out.println("Übergewichtig.");
+				System.out.println("Uebergewichtig.");
 			}
 		} else // Alter >= 65
 		{
@@ -73,7 +73,7 @@ public class BodyMassIndex {
 			} else if (bmi <= 29) {
 				System.out.println("Normalgewichtig.");
 			} else {
-				System.out.println("Übergewichtig.");
+				System.out.println("Uebergewichtig.");
 			}
 		}
 

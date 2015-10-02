@@ -1,8 +1,8 @@
 package blackjack.karten;
 
 /**
- * Objekte dieser Klasse repräsentieren eine einzelne Spielkarte. Einmal erzeugt
- * kann eine Spielkarte Ihren Zustand nicht mehr ändern.
+ * Objekte dieser Klasse repraesentieren eine einzelne Spielkarte. Einmal erzeugt
+ * kann eine Spielkarte Ihren Zustand nicht mehr aendern.
  * 
  * @author Malte Knutz
  * 
@@ -10,11 +10,11 @@ package blackjack.karten;
 public class Spielkarte {
 
 	/**
-	 * Die Farbe der Spielkarte. Gültige Farben sind als Konstanten hinterlegt.
+	 * Die Farbe der Spielkarte. Gueltige Farben sind als Konstanten hinterlegt.
 	 */
 	private final String farbe;
 	/**
-	 * Die Bezeichnung einer Spielkarte. Gültige Bezeichnungen sind als
+	 * Die Bezeichnung einer Spielkarte. Gueltige Bezeichnungen sind als
 	 * Konstanten hinterlegt.
 	 */
 	private final String bezeichnung;
@@ -23,7 +23,7 @@ public class Spielkarte {
 	private static final String BEZEICHNUNG_ZWEI = "Zwei";
 	private static final String BEZEICHNUNG_DREI = "Drei";
 	private static final String BEZEICHNUNG_VIER = "Vier";
-	private static final String BEZEICHNUNG_FUENF = "Fünf";
+	private static final String BEZEICHNUNG_FUENF = "Fuenf";
 	private static final String BEZEICHNUNG_SECHS = "Sechs";
 	private static final String BEZEICHNUNG_SIEBEN = "Sieben";
 	private static final String BEZEICHNUNG_ACHT = "Acht";
@@ -31,7 +31,7 @@ public class Spielkarte {
 	private static final String BEZEICHNUNG_ZEHN = "Zehn";
 	private static final String BEZEICHNUNG_BUBE = "Bube";
 	private static final String BEZEICHNUNG_DAME = "Dame";
-	private static final String BEZEICHNUNG_KOENIG = "König";
+	private static final String BEZEICHNUNG_KOENIG = "Koenig";
 
 	private static final String FARBE_KARO = "Karo";
 	private static final String FARBE_HERZ = "Herz";
@@ -52,9 +52,9 @@ public class Spielkarte {
 	}
 
 	/**
-	 * Liefert eine Liste aller gültigen Kartenbezeichnungen.
+	 * Liefert eine Liste aller gueltigen Kartenbezeichnungen.
 	 * 
-	 * @return eine Liste aller gültigen Kartenbezeichnungen
+	 * @return eine Liste aller gueltigen Kartenbezeichnungen
 	 */
 	public static String[] ermittleGueltigeKartenbezeichnungen() {
 		String[] gueltigeKartenbezeichnungen = new String[13];
@@ -75,9 +75,9 @@ public class Spielkarte {
 	}
 
 	/**
-	 * Liefert eine Liste aller gültigen Kartenfarben.
+	 * Liefert eine Liste aller gueltigen Kartenfarben.
 	 * 
-	 * @return eine Liste aller gültigen Kartenfarben
+	 * @return eine Liste aller gueltigen Kartenfarben
 	 */
 	public static String[] ermittleGueltigeFarben() {
 		String[] gueltigeFarben = new String[4];
@@ -89,8 +89,8 @@ public class Spielkarte {
 	}
 
 	/**
-	 * Ermittelt den normalen Kartenwert, d.h. 2-10 für die Karten "Zwei" bis
-	 * "Zehn", 10 für die Bildkarten Bube, Dame und König sowie 11 für das Ass
+	 * Ermittelt den normalen Kartenwert, d.h. 2-10 fuer die Karten "Zwei" bis
+	 * "Zehn", 10 fuer die Bildkarten Bube, Dame und Koenig sowie 11 fuer das Ass
 	 * 
 	 * @return den Kartenwert, von 2 bis 11
 	 */
@@ -122,14 +122,14 @@ public class Spielkarte {
 		} else if (getBezeichnung().equals(BEZEICHNUNG_KOENIG)) {
 			return 10;
 		} else {
-			System.out.println("Fehler!!! Ungültige Karte: " + getBezeichnung());
+			System.out.println("Fehler!!! Ungueltige Karte: " + getBezeichnung());
 			System.exit(0);
 			return 0;
 		}
 	}
 
 	/**
-	 * Prüft, ob die Karte ein Ass ist.
+	 * Prueft, ob die Karte ein Ass ist.
 	 * 
 	 * @return true, wenn die Karte ein Ass ist, false wenn nicht
 	 */
@@ -156,10 +156,10 @@ public class Spielkarte {
 	}
 
 	/**
-	 * Liefert eine lesbare Textdarstellung für diese Karte. Beispiel: Pik
+	 * Liefert eine lesbare Textdarstellung fuer diese Karte. Beispiel: Pik
 	 * Sieben
 	 * 
-	 * @return eine lesbare Textdarstellung für diese Karte.
+	 * @return eine lesbare Textdarstellung fuer diese Karte.
 	 */
 	public String getTextdarstellung() {
 		return getFarbe() + " " + getBezeichnung();

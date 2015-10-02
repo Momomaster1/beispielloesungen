@@ -43,11 +43,11 @@ public class Auto {
 			return;
 		}
 
-		// Erstmal nachsehen, wie weit wir grundsätzlich kommen würden
+		// Erstmal nachsehen, wie weit wir grundsaetzlich kommen wuerden
 		double reichweite = bestimmeReichweite();
 
-		// Will jemand weiter fahren als die Reichweite beträgt?
-		// Wenn ja, dann müssen wir das beschränken
+		// Will jemand weiter fahren als die Reichweite betraegt?
+		// Wenn ja, dann muessen wir das beschraenken
 		double wirklichGefahreneKm;
 		if (km > reichweite) {
 			wirklichGefahreneKm = reichweite;
@@ -70,7 +70,7 @@ public class Auto {
 		double verfahrbaresRestprofil = profiltiefeReifen - minimalErlaubteProfiltiefe;
 		double reichweiteReifen = verfahrbaresRestprofil / getReifenAbnutzungProKm();
 
-		// Jetzt prüfen, was mehr einschränkt. Die Reifen oder Tank?
+		// Jetzt pruefen, was mehr einschraenkt. Die Reifen oder Tank?
 		if (reichweiteReifen < reichweiteTank) {
 			return reichweiteReifen;
 		} else {
@@ -80,7 +80,7 @@ public class Auto {
 
 	public double getReifenAbnutzungProKm() {
 		// Diese Methode bestimmt, wie stark die Reifenabnutzung pro Km
-		// wäre, wenn das Auto jetzt fahren würde
+		// waere, wenn das Auto jetzt fahren wuerde
 		if (!isFahrerOk()) {
 			return 0;
 		}
@@ -95,7 +95,7 @@ public class Auto {
 
 	public double getBenzinverbrauchProKm() {
 		// Diese Methode bestimmt, wie stark der Benzinverbrauch pro Km
-		// wäre, wenn das Auto jetzt fahren würde
+		// waere, wenn das Auto jetzt fahren wuerde
 		if (!isFahrerOk()) {
 			return 0;
 		}
@@ -109,11 +109,11 @@ public class Auto {
 	}
 
 	public boolean isFahrerOk() {
-		// Ohne Fahrer läuft hier gar nichts
+		// Ohne Fahrer laeuft hier gar nichts
 		if (fahrer == null) {
 			return false;
 		}
-		// Jünger als 18? Dann passiert auch nix
+		// Juenger als 18? Dann passiert auch nix
 		if (fahrer.getAlter() < 18) {
 			return false;
 		}
@@ -127,7 +127,7 @@ public class Auto {
 			fahrername = fahrer.getName();
 		}
 		System.out.println(wagenname + ": " + fahrername + " am Steuer, " + kilometerstand + " bisher gefahren. Tankinhalt "
-				+ tankinhalt + " liter und " + profiltiefeReifen + " mm Reifenprofil übrig.");
+				+ tankinhalt + " liter und " + profiltiefeReifen + " mm Reifenprofil uebrig.");
 	}
 
 	public void tanken() {
@@ -147,7 +147,7 @@ public class Auto {
 			// Ja: Dann einfach nur Tank voll machen
 			tanken();
 		} else {
-			// Nein: Tank um die Tankmenge füllen
+			// Nein: Tank um die Tankmenge fuellen
 			this.tankinhalt = liter + tankinhalt;
 		}
 	}

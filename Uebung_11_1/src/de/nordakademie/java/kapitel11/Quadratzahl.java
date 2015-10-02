@@ -15,7 +15,7 @@ public class Quadratzahl {
 				if ("".equals(eingabe)) {
 					System.out.println("Sie haben nichts eingegeben!");
 				} else {
-					System.out.println("Sie haben keine gültige Zahl eingegeben: " + eingabe);
+					System.out.println("Sie haben keine gueltige Zahl eingegeben: " + eingabe);
 				}
 			}
 		} while (eingabe != null);

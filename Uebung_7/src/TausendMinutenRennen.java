@@ -39,7 +39,7 @@ public class TausendMinutenRennen {
 	}
 
 	private static void wechlseFahrer(Auto[] autos) {
-		// Zuerst mal klären: Was ist das leere Auto und welche sind besetzt?
+		// Zuerst mal klaeren: Was ist das leere Auto und welche sind besetzt?
 		Auto leeresAuto = null;
 		Auto[] besetzteAutos = new Auto[autos.length - 1];
 
@@ -60,7 +60,7 @@ public class TausendMinutenRennen {
 			return;
 		}
 
-		// Nun zufällig ein besetztes wählen
+		// Nun zufaellig ein besetztes waehlen
 		int z = Zufall.getZufallInt(0, besetzteAutos.length - 1);
 		Auto besetztesAuto = besetzteAutos[z];
 
@@ -73,7 +73,7 @@ public class TausendMinutenRennen {
 	}
 
 	private static void nutzeDieMinute(Auto auto) {
-		// Wir entscheiden zufällig, was in dieser Minute passiert
+		// Wir entscheiden zufaellig, was in dieser Minute passiert
 		int zufall = Zufall.getZufallInt(1, 100);
 		switch (zufall) {
 		case 1:

@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 import blackjack.karten.Kartenhand;
 
 /**
- * Diese Klasse stellt diverse statische Methoden zur Verfügung, um mit dem
- * Anwender zu kommunizieren. Da alle Methoden statisch sind, müssen keine
- * Objekte erzeugt werden und konsequenterweise wird auch gar kein öffentlicher
+ * Diese Klasse stellt diverse statische Methoden zur Verfuegung, um mit dem
+ * Anwender zu kommunizieren. Da alle Methoden statisch sind, muessen keine
+ * Objekte erzeugt werden und konsequenterweise wird auch gar kein oeffentlicher
  * Konstruktor angeboten.
  * 
  * @author Malte Knutz
@@ -21,11 +21,11 @@ public class Benutzerinterface {
 	private static final String TITEL = "Virtual Black Jack";
 
 	/**
-	 * die Bezeichnung eines möglichen Spielzuges: hit.
+	 * die Bezeichnung eines moeglichen Spielzuges: hit.
 	 */
 	public static final String SPIELZUG_HIT = "hit (Karte nehmen)";
 	/**
-	 * die Bezeichnung eines möglichen Spielzuges: stay.
+	 * die Bezeichnung eines moeglichen Spielzuges: stay.
 	 */
 	public static final String SPIELZUG_STAY = "stay (Blatt behalten)";
 
@@ -36,12 +36,12 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Gibt die Begrüssungsmeldung zum Spiel aus.
+	 * Gibt die Begruessungsmeldung zum Spiel aus.
 	 * 
 	 */
 	public static void begruessung() {
 		String text = "Willkommen beim Virtual Black Jack\n"
-				+ "Das Spiel wird unverzüglich starten, der Geber hält die ersten beiden Karten schon parat...";
+				+ "Das Spiel wird unverzueglich starten, der Geber haelt die ersten beiden Karten schon parat...";
 		JOptionPane.showMessageDialog(null, text, TITEL, JOptionPane.INFORMATION_MESSAGE);
 	}
 
@@ -54,14 +54,14 @@ public class Benutzerinterface {
 	 */
 	public static String frageNachSpielzug(Kartenhand kartenhand) {
 		String text = "Ihre Karten: " + kartenhand.getTextdarstellung() + "\nIhr Spielzug?";
-		// Die Möglichkeiten des Anwenders
+		// Die Moeglichkeiten des Anwenders
 		String[] optionen = new String[2];
 		optionen[0] = SPIELZUG_HIT;
 		optionen[1] = SPIELZUG_STAY;
 		// Die Frage herausgeben
 		int auswahl = JOptionPane.showOptionDialog(null, text, TITEL, JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE,
 				null, optionen, optionen[0]);
-		// Die Antwort verarbeiten: Wenn der Dialog geschlossen wird (übers
+		// Die Antwort verarbeiten: Wenn der Dialog geschlossen wird (uebers
 		// Kreuz), dann das Programm sofort beenden
 		if (auswahl == JOptionPane.CLOSED_OPTION) {
 			System.exit(0);
@@ -70,7 +70,7 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Informiert den Anwender über die Kartenhand des Gebers.
+	 * Informiert den Anwender ueber die Kartenhand des Gebers.
 	 * 
 	 * @param kartenhand
 	 *            die Kartenhand des Gebers.
@@ -81,7 +81,7 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Gibt eine Verloren-Meldung mit der Begründung aus, dass der Spieler mehr
+	 * Gibt eine Verloren-Meldung mit der Begruendung aus, dass der Spieler mehr
 	 * als 21 Punkte hat.
 	 * 
 	 * @param kartenGeber
@@ -95,7 +95,7 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Gibt eine Gewonnen-Meldung mit der Begründung aus, dass der Geber mehr
+	 * Gibt eine Gewonnen-Meldung mit der Begruendung aus, dass der Geber mehr
 	 * als 21 Punkte hat
 	 * 
 	 * @param kartenGeber
@@ -109,7 +109,7 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Gibt eine Verloren-Meldung mit der Begründung aus, dass der Geber mehr
+	 * Gibt eine Verloren-Meldung mit der Begruendung aus, dass der Geber mehr
 	 * Punkte als der Spieler hat.
 	 * 
 	 * @param kartenGeber
@@ -123,7 +123,7 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Gibt eine Gewonnen-Meldung mit der Begründung aus, dass der Spieler mehr
+	 * Gibt eine Gewonnen-Meldung mit der Begruendung aus, dass der Spieler mehr
 	 * Punkte als der Geber hat.
 	 * 
 	 * @param kartenGeber
@@ -137,7 +137,7 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Gibt eine Unentschieden-Meldung mit der Begründung aus, dass Spieler und
+	 * Gibt eine Unentschieden-Meldung mit der Begruendung aus, dass Spieler und
 	 * Geber gleich viele Punkte haben.
 	 * 
 	 * @param kartenGeber
@@ -151,14 +151,14 @@ public class Benutzerinterface {
 	}
 
 	/**
-	 * Erzeugt eine zweizeilige Textdarstellung mit den Kartenhänden des Gebers
+	 * Erzeugt eine zweizeilige Textdarstellung mit den Kartenhaenden des Gebers
 	 * und des Spielers.
 	 * 
 	 * @param kartenGeber
 	 *            Karten des Gebers
 	 * @param kartenSpieler
 	 *            Karten des Spielers
-	 * @return Textdarstellung mit den Kartenhänden des Gebers und des Spielers
+	 * @return Textdarstellung mit den Kartenhaenden des Gebers und des Spielers
 	 */
 	private static String erzeugeKartenaufstellung(Kartenhand kartenGeber, Kartenhand kartenSpieler) {
 		return "Ihre Karten: " + kartenSpieler.getTextdarstellung() + "\nKarten des Gebers: "

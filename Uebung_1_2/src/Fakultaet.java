@@ -9,7 +9,7 @@ public class Fakultaet {
 			loesung = loesung * n;
 		}
 
-		System.out.println("Die Fakultät von " + eingabe + " ist " + loesung);
+		System.out.println("Die Fakultaet von " + eingabe + " ist " + loesung);
 
 	}
 

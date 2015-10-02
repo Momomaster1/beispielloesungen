@@ -7,12 +7,12 @@ public class Palindromtest {
 	public static void main(String[] args) {
 
 		// Eingabe lesen
-		String eingabe = JOptionPane.showInputDialog(null, "Wort für Palindromtest:");
+		String eingabe = JOptionPane.showInputDialog(null, "Wort fuer Palindromtest:");
 
 		// Wir arbeiten mit einem Text, der komplett kleingeschrieben ist...
 		String allesInKlein = eingabe.toLowerCase();
 
-		// Länge der eingabe und Anzahl der notwendigen
+		// Laenge der eingabe und Anzahl der notwendigen
 		// Vergleiche ermitteln
 		int laenge = allesInKlein.length();
 		int anzahlVergleiche = laenge / 2;
@@ -22,7 +22,7 @@ public class Palindromtest {
 		// feststellen...
 		boolean istPalindrom = true;
 
-		// Die einzelnen Vergleiche durchführen, z.B.:
+		// Die einzelnen Vergleiche durchfuehren, z.B.:
 		// lagerregal:
 		// 1. l....|....l
 		// 2. .a...|...a.
@@ -40,8 +40,8 @@ public class Palindromtest {
 			String vonLinks = allesInKlein.substring(zeichenindexVonLinks, zeichenindexVonLinks + 1);
 			String vonRechts = allesInKlein.substring(zeichenindexVonRechts, zeichenindexVonRechts + 1);
 
-			// Prüfen: ist das Buchstabenpaar
-			// ungleich? Dann hätten wir definitiv
+			// Pruefen: ist das Buchstabenpaar
+			// ungleich? Dann haetten wir definitiv
 			// kein Palindrom vorliegen...
 			if (!vonLinks.equals(vonRechts)) {
 				istPalindrom = false;
