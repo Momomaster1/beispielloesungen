@@ -84,7 +84,7 @@ public class Kundenrabatt {
 		System.out.println("");
 		System.out.println("*** Ergebnis Rabattrechnung ***");
 		System.out.println("");
-		System.out.println("Gewaehrter Rabatt: " + rabattInEuro + " € (" + rabattInProzent + "%)");
+		System.out.println("Gewaehrter Rabatt: " + rabattInEuro + " Euro (" + rabattInProzent + "%)");
 		System.out.println("Rechnungshoehe: " + neuerBestellwert);
 
 	}
