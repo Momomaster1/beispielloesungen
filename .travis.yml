@@ -6,6 +6,20 @@ jdk:
 before_install:
   - chmod +x gradlew
 
+env:
+  global:
+   - secure: "Kni5eE6kweVLo0bVKl5vHskuUKhZN3m7ilb6bCfsyvfWagJIZbkKq4KEEcJWx06JxZgTRqYS3ll5E8PJ25qQIq3y156x/YfD5d0AG+clmI6As/eQaB9yvcTgTKdXFh4NTepX2L5YBvP9WjlM43x4q/KNe4SF2/qIjUd2qnjMPd3DY7f337tXgZWZZdKFfF5Izk8U6hoOukELT35OojAqDuV5zaXr4CBo10+TDzH4uLXpvSyPDnslDu+NqvjklV3CVxRNSLo45wQTZL5vzTV2n7B3QpB+q2fuf/b0fnlz8XvCSkZfFwDIoj6ZVGnwIuZbdsAtj+pZ708nJ2VRxli2yO0URVONck8yZfKIuesPgb4KQrDWbndwgkJXa3tP0J3aew1t8fHSVuLEJGk7DmQI2x788yq1fDac8cnpBeVITP97tW9F7cAmbIIDn+P48L1Hs3nkhEM57WYGD5gzEcKdb9486bP8Ucq18dia03ZLwv7OuAfHjZhHbUiKZqPjA7qOwbFpeXLsOGj4FreVDaeSm/tiXcjw0Ro9Yjjgd3HbTkuyyP6J9A1oOqwvAHTj9Slcn0uHJhhJGGGHKbGkPuPigVbSv6YVTpV7YyLNhJejIdn7VSDSmpSqwXsSF0QM2oReMFkrbW1pW2zne/O0sKqn+qAGPNS3nFjo5zmZllOsj+I="
+
+addons:
+  coverity_scan:
+    project:
+      name: "nordakademie-einfuehrung-java/beispielloesungen"
+      description: "Build of sample solutions for Java lecture exercises submitted via Travis CI"
+    notification_email: bjoern.kimminich@gmx.de
+    build_command_prepend: "./gradlew clean"
+    build_command: "./gradlew assemble"
+    branch_pattern: coverity_scan
+
 notifications:
   webhooks:
     urls:
