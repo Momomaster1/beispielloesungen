@@ -2,7 +2,7 @@ public class PQFormel {
 	public static void main(String[] args) {
 		// Initialisierung der Werte fuer p und q
 		double q = 15;
-		int p = 8;
+		double p = 8;
 
 		// Berechnung des Terms unter der Wurzel
 		double unterDerWurzel = ((p / 2) * (p / 2)) - q;
@@ -17,6 +17,5 @@ public class PQFormel {
 		System.out.println("x1 = " + loesung1);
 		System.out.println("x2 = " + loesung2);
 
-		System.out.println("Ergebnis: " + (2 + 4));
 	}
 }
