@@ -168,7 +168,7 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * In Uebung 7 soll der Abstand zweier Punkt die Farbgebung (rot-, gruen- oder
+	 * In Uebung 6 soll der Abstand zweier Punkt die Farbgebung (rot-, gruen- oder
 	 * blauAnteil) bestimmen. Diese Methode uebernimmt genau diese Berechnung.
 	 * 
 	 * @param abstand
@@ -182,7 +182,7 @@ public class Uebungsblock {
 	}
 
 	/**
-	 * In Uebung 8 soll der Abstand zweier Punkt die Farbgebung (rot-, gruen- oder
+	 * In Uebung 7 soll der Abstand zweier Punkt die Farbgebung (rot-, gruen- oder
 	 * blauAnteil) bestimmen. Diese Methode uebernimmt genau diese Berechnung.
 	 * 
 	 * @param abstand
