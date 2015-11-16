@@ -1,11 +1,14 @@
 package blackjack.karten;
 
+import blackjack.exceptions.LeererKartenstapelException;
+
 import java.util.Random;
 
 /**
  * Objekte dieser Klasse repraesentieren einen Kartenstapel.
  * 
  * @author Malte Knutz
+ * @author Bjoern Kimminich
  */
 public class Spielkartenstapel {
 

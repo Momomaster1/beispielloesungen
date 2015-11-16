@@ -1,4 +1,4 @@
-package blackjack.karten;
+package blackjack.exceptions;
 
 public class LeererKartenstapelException extends IllegalStateException {
 

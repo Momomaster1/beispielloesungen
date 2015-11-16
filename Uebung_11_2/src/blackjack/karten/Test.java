@@ -1,5 +1,7 @@
 package blackjack.karten;
 
+import blackjack.exceptions.LeererKartenstapelException;
+
 public class Test {
 
     public static void main(String[] args) {
