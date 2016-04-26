@@ -8,7 +8,7 @@ public class Auto {
 	// Pro Auto unveraenderbar
 	private final double maxTankVolumen;
 	private final double verbrauchProKm;
-	private final int wagennr;
+	private final int fahrgestellnummer;
 
 	// Veraenderliche Attribute
 	private double kilometerstand;
@@ -17,15 +17,15 @@ public class Auto {
 	private Person fahrer;
 
 	// Statische Variable
-	private static int naechsteFreieWagennr = 1;
+	private static int naechsteFreieFahrgestellnummer = 1;
 
 	public Auto(double maxTankVolumen, double verbrauchProKm) {
 		this.maxTankVolumen = maxTankVolumen;
 		this.verbrauchProKm = verbrauchProKm;
 
 		// dieses Auto bekommt seine Wagennummer ...
-		this.wagennr = naechsteFreieWagennr;
-		naechsteFreieWagennr++;
+		this.fahrgestellnummer = naechsteFreieFahrgestellnummer;
+		naechsteFreieFahrgestellnummer++;
 
 		// gleich volltanken und frische Reifen drauf
 		tanken();
@@ -164,7 +164,7 @@ public class Auto {
 	}
 
 	public String getWagenname() {
-		return "Wagen Nr. " + wagennr;
+		return "Wagen Nr. " + fahrgestellnummer;
 	}
 
 }
