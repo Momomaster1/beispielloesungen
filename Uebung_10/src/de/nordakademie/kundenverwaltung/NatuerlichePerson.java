@@ -18,7 +18,7 @@ public class NatuerlichePerson extends Person {
     }
 
     public String lieferePostanschrift() {
-        return anrede + " " + getName() + "\n" + getAdresse();
+        return anrede + " " + super.lieferePostanschrift();
     }
 
 }
