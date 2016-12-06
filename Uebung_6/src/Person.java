@@ -13,7 +13,7 @@ public class Person {
 	}
 
 	public int getAlter() {
-		return 2013 - geburtsjahr;
+		return 2016 - geburtsjahr;
 	}
 
 }
