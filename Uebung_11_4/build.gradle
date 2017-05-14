@@ -1,2 +1,2 @@
 apply plugin: 'application'
-mainClassName = 'de.nordakademie.java.kapitel11.Quadratzahl'
+mainClassName = 'de.nordakademie.zahlenauswertung.Zahlenauswertung'
